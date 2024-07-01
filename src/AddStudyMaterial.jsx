@@ -44,7 +44,7 @@ function AddStudyMaterial() {
         }
     
         try {
-          const res = await axios.post("http://localhost:4000/api/addStudy", {
+          const res = await axios.post("https://contentappbackend.onrender.com/api/addStudy", {
             name,
             subject,
             description,
