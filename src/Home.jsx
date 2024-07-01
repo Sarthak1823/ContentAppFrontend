@@ -21,7 +21,7 @@ function Home() {
           return ;
       }
       try{ 
-     const res= await axios.post("http://localhost:4000/api/register",{name,email,password});
+     const res= await axios.post("https://contentappbackend.onrender.com/api/register",{name,email,password});
        alert(res.data.message);
       }
       catch(err){
@@ -35,7 +35,7 @@ function Home() {
   const handleLogin=async (e)=>{
        e.preventDefault();
        try{
-          const res=await axios.post("http://localhost:4000/api/login",{email,password});
+          const res=await axios.post("https://contentappbackend.onrender.com/api/login",{email,password});
           alert(res.data.message);
        }
        catch(err){
