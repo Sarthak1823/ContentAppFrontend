@@ -11,7 +11,7 @@ function AddMeme() {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const data= await  axios.post('http://localhost:4000/api/add',
+    const data= await  axios.post('https://contentappbackend.onrender.com/api/add',
       {name,description,link});
        alert(data.data.message);
      setName("");
