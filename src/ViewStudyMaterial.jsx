@@ -11,7 +11,7 @@ function ViewStudyMaterial() {
   useEffect(() => {
     const fetchStudyMaterials = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/study");
+        const res = await axios.get("https://contentappbackend.onrender.com/api/study");
         setStudyMaterial(res.data);
       } catch (err) {
         console.error("Error fetching study materials:", err);
@@ -23,7 +23,7 @@ function ViewStudyMaterial() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/deletestudy", {
+      const res = await axios.post("https://contentappbackend.onrender.com/api/deletestudy", {
         id,
       });
       alert("Study material deleted successfully!");
@@ -38,7 +38,7 @@ const   handleFilter= async (e)=>{
     
        try{
        
-         const res= await axios.post("http://localhost:4000/api/filter",{filterSubject,filterCategory});
+         const res= await axios.post("https://contentappbackend.onrender.com/api/filter",{filterSubject,filterCategory});
             
             setStudyMaterial(res.data.studyMaterial);
          }
