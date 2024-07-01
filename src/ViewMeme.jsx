@@ -9,7 +9,7 @@ function ViewMeme() {
   useEffect(() => {
     const fetchMemes = async () => {
       try {
-        const response = await axios.post('http://localhost:4000/api/memes');
+        const response = await axios.post('https://contentappbackend.onrender.com/api/memes');
         setMemes(response.data);
       } catch (err) {
         console.error('Error fetching memes', err);
@@ -22,7 +22,7 @@ function ViewMeme() {
   const handleDeleteMeme = async (id) => {
     
    try {
-     const res = await axios.post('http://localhost:4000/api/deletememes',{id});
+     const res = await axios.post('https://contentappbackend.onrender.com/api/deletememes',{id});
      alert('Meme deleted successfully!');
      setMemes(res.data.memes);
    } catch (err) {
